@@ -1,0 +1,44 @@
+CREATE TABLE records (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    username varchar(255) NOT NULL UNIQUE,
+    firstname varchar(255) NOT NULL,
+    lastname varchar(255) NOT NULL,
+    email varchar(255),
+    hashtype varchar(255) NOT NULL,
+    datecreated varchar(255) NOT NULL,
+    lastaccess varchar(255) NOT NULL,
+    password varchar(255) NOT NULL,
+    rights varchar(255) NOT NULL
+);
+
+
+
+The CS Tech Support page has instructions on the FAQ page:
+http://csts.cs.utep.edu/faq/index.html
+On the link "MySQL", you find the following:
+------------------------------
+To log into your mysql account, follow these steps:
+    Log into or ssh to cslinux.cs.utep.edu, using your MINERS credentials.
+    Open a command terminal.
+    # mysql -u {username} -h earth -p
+Once you log into cslinux.cs.utep.edu, follow these steps to change your password:
+    # mysql -u {username} -h earth -p
+    Enter your current mysql password.
+    # SET PASSWORD = PASSWORD('secretcode');
+    Exit and test your password.
+-------------------------------
+I personally connect using Putty. 
+We found out that to you need to VPN to UTEP even if you're already at UTEP using utepsecure wifi.
+If you are connected directly with an internet wire, you don't need VPN.
+On earth your username is the same as your miners username.
+Your default password is cs5339!<miners username>.
+Please change your password as instructed above.
+
+In the PHP file, you can use:
+$user="<UTEP user name>";
+$hn="earth.cs.utep.edu";
+$un="$user";
+$db="$user";
+$pw="cs5339!$user";?   // or whatever password you've changed to
+?
+The database cannot be accessed with PhpMyAdmin.
