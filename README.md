@@ -29,7 +29,8 @@ did not cover it in class, but it is part of our textbook.
 
 - [ ] Data validation from new or existing customers should be validated
 with JavaScript in addition to the server validation.
-The tasks could be separated into several tasks:
+
+###### The tasks could be separated into several tasks: ######
 
 - [ ] Display car parts: There should be options for sorting, filtering and
 display. Sorting refers to the order of the display information. Filtering
@@ -64,9 +65,10 @@ responsibility for the task. Of course, this is a team project, and anyone can
 help with any of the tasks. A grade will be calculated for each task as you
 define it. Individual grades will be calculated as a weighted average of all
 tasks grades, with more weight on the tasks an individual is responsible for.
-You will submit an individual report and a team report. Instructions for
-what to include in your reports will be communicated later.
 
+
+## You will submit an individual report and a team report. ## 
+Instructions for what to include in your reports will be communicated later.
 
 # Due date: Somewhere around December 8. # 
 
