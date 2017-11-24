@@ -13,10 +13,13 @@
 	$current = basename($_SERVER['PHP_SELF']);
 
 	//all pages can navigate to mainpage
-	echo "<ul class=\"menu\">
-  		<li><a href=\"mainpage.php\">Home</a></li>";
+	echo "<ul class=\"menu\">";
+  		//except mainpage
+      if(strcmp($current, "mainpage.php") != 0){
+      echo "<li><a href=\"mainpage.php\">Home</a></li>";
+      }
 
-      //if not signed in neither as admin or user.
+      //if not signedin neither as admin or user.
   		if(!(isset($_SESSION['regUsername'])||(isset($_SESSION['adminUsername'])))){
 
   			//display "go to signin page" option in every page except signin.php 
@@ -26,7 +29,23 @@
         //display "go to signup page" option in every page except signup.php
   			if(strcmp($current, "signup.php") != 0)
   			echo "<li><a href=\"signup.php\">Sign up</a></li>";
-  		}else{
+  		}
+
+      //if on mainpage, display the filtering options.
+      if(strcmp($current,"mainpage.php") == 0){
+      echo "
+              <li>
+                <div class=\"filteringOptions\">
+
+                filtering dropdown menus go here
+
+                </div>
+              <li>
+      ";
+      }
+
+      //if theres an account logged in.
+      if((isset($_SESSION['regUsername'])||(isset($_SESSION['adminUsername'])))){
 
         //otherwise, user is signed in, display a "signout" button.
         echo "<li style=\"float:right;\">
