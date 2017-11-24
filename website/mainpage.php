@@ -30,7 +30,7 @@ require_once('navigationMenu.php');
 
 echo '
 	<div class="content">	
-		<h2>Content:</h2><br/>
+		<h2>display item blocks here</h2><br/>
 ';
 
 

@@ -2,7 +2,7 @@
 
 	//to be able to sign out everywhere there is a menu.
 	if (isset($_POST['signout'])) {
-    //session_destroy();
+    
     unset($_SESSION['regUsername']);
     unset($_SESSION['adminUsername']);
     unset($_SESSION['password']);
@@ -35,14 +35,33 @@
       if(strcmp($current,"mainpage.php") == 0){
       echo "
               <li>
-                <div class=\"filteringOptions\">
+                <div class=\"filtersarea\">
 
-                filtering dropdown menus go here
+                <div>
+
+                  <label>Sort by</label>
+
+                  <select>
+                    <option>Price: High to low</option>
+                    <option>Price: Low to high</option>
+                    <option>None</option>
+                  </select>
 
                 </div>
-              <li>
+
+                </div>
+
+              </li>
       ";
       }
+
+        //give option to go to shopping cart page, cart items are stored in session array.
+        /*echo "
+              <li style=\"float:right;\">
+                <a href=\"checkout.php\">Cart</a>
+              </li>
+            ";
+        */
 
       //if theres an account logged in.
       if((isset($_SESSION['regUsername'])||(isset($_SESSION['adminUsername'])))){
