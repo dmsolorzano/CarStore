@@ -1,0 +1,57 @@
+CREATE TABLE ZiptoState (
+    `StateName` VARCHAR(14) CHARACTER SET utf8,
+    `StateAbrv` VARCHAR(2) CHARACTER SET utf8,
+    `LowZip` INT,
+    `HighZip` INT
+);
+INSERT INTO ZiptoState VALUES ('Massachusetts','MA',01000,02799);
+INSERT INTO ZiptoState VALUES ('Rhode Island','RI',02800,02999);
+INSERT INTO ZiptoState VALUES ('New Hampshire','NH',03000,03899);
+INSERT INTO ZiptoState VALUES ('Maine','ME',03900,04999);
+INSERT INTO ZiptoState VALUES ('Vermont','VT',05000,05999);
+INSERT INTO ZiptoState VALUES ('Connecticut','CT',06000,06999);
+INSERT INTO ZiptoState VALUES ('New Jersey','NJ',07000,08999);
+INSERT INTO ZiptoState VALUES ('New York','NY',10000,14999);
+INSERT INTO ZiptoState VALUES ('Pennsylvania','PA',15000,19699);
+INSERT INTO ZiptoState VALUES ('Delaware','DE',19700,19999);
+INSERT INTO ZiptoState VALUES ('Washington DC','DC',20000,20599);
+INSERT INTO ZiptoState VALUES ('Maryland','MD',20600,21999);
+INSERT INTO ZiptoState VALUES ('Virginia','VA',22000,24699);
+INSERT INTO ZiptoState VALUES ('West Virginia','WV',24700,26999);
+INSERT INTO ZiptoState VALUES ('North Carolina','NC',27000,28999);
+INSERT INTO ZiptoState VALUES ('South Carolina','SC',29000,29999);
+INSERT INTO ZiptoState VALUES ('Georgia','GA',30000,31999);
+INSERT INTO ZiptoState VALUES ('Florida','FL',32000,34999);
+INSERT INTO ZiptoState VALUES ('Alabama','AL',35000,36999);
+INSERT INTO ZiptoState VALUES ('Tennessee','TN',37000,38599);
+INSERT INTO ZiptoState VALUES ('Mississippi','MS',38600,39999);
+INSERT INTO ZiptoState VALUES ('Kentucky','KY',40000,42999);
+INSERT INTO ZiptoState VALUES ('Ohio','OH',43000,45999);
+INSERT INTO ZiptoState VALUES ('Indiana','IN',46000,47999);
+INSERT INTO ZiptoState VALUES ('Michigan','MI',48000,49999);
+INSERT INTO ZiptoState VALUES ('Iowa','IA',50000,52999);
+INSERT INTO ZiptoState VALUES ('Wisconsin','WI',53000,54999);
+INSERT INTO ZiptoState VALUES ('Minnesota','MN',55000,56999);
+INSERT INTO ZiptoState VALUES ('South Dakota','SD',57000,57999);
+INSERT INTO ZiptoState VALUES ('North Dakota','ND',58000,58999);
+INSERT INTO ZiptoState VALUES ('Montana','MT',59000,59999);
+INSERT INTO ZiptoState VALUES ('Illinois','IL',60000,62999);
+INSERT INTO ZiptoState VALUES ('Missouri','MO',63000,65999);
+INSERT INTO ZiptoState VALUES ('Kansas','KS',66000,67999);
+INSERT INTO ZiptoState VALUES ('Nebraska','NE',68000,69999);
+INSERT INTO ZiptoState VALUES ('Louisiana','LA',70000,71599);
+INSERT INTO ZiptoState VALUES ('Arkansas','AR',71600,72999);
+INSERT INTO ZiptoState VALUES ('Oklahoma','OK',73000,74999);
+INSERT INTO ZiptoState VALUES ('Texas','TX',75000,79999);
+INSERT INTO ZiptoState VALUES ('Colorado','CO',80000,81999);
+INSERT INTO ZiptoState VALUES ('Wyoming','WY',82000,83199);
+INSERT INTO ZiptoState VALUES ('Idaho','ID',83200,83999);
+INSERT INTO ZiptoState VALUES ('Utah','UT',84000,84999);
+INSERT INTO ZiptoState VALUES ('Arizona','AZ',85000,86999);
+INSERT INTO ZiptoState VALUES ('New Mexico','NM',87000,88899);
+INSERT INTO ZiptoState VALUES ('Nevada','NV',88900,89999);
+INSERT INTO ZiptoState VALUES ('California','CA',90000,96699);
+INSERT INTO ZiptoState VALUES ('Hawaii','HI',96700,96999);
+INSERT INTO ZiptoState VALUES ('Oregon','OR',97000,97999);
+INSERT INTO ZiptoState VALUES ('Washington','WA',98000,99499);
+INSERT INTO ZiptoState VALUES ('Alaska','AK',99500,99999);
