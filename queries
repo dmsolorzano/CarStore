@@ -1,0 +1,49 @@
+#queries to work with the database
+##to access te datatbase
+-servername: earth.cs.utep.edu
+-username: fgarciayala
+-password: cs5339!fgarciayala
+-database: fgarciayala
+
+'''MySQL
+#display car parts
+  SELECT * FROM parts where something = "filter";
+---
+#find a custumer
+SELECT * FROM members where name something = "filter";
+---
+#find price
+SELECT price FROM parts where something = "filter";
+---
+#insert custumer
+insert into members () VALUES();
+---
+
+mysql> describe members;
++-----------+------------------+------+-----+---------+----------------+
+| Field     | Type             | Null | Key | Default | Extra          |
++-----------+------------------+------+-----+---------+----------------+
+| id        | int(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| firstname | varchar(30)      | NO   |     | NULL    |                |
+| lastname  | varchar(30)      | NO   |     | NULL    |                |
+| country   | varchar(30)      | NO   |     | NULL    |                |
+| state     | varchar(30)      | NO   |     | NULL    |                |
+| city      | varchar(30)      | NO   |     | NULL    |                |
+| street    | varchar(30)      | NO   |     | NULL    |                |
+| zipcode   | int(20)          | NO   |     | NULL    |                |
+| password  | varchar(50)      | NO   |     | NULL    |                |
+| privilege | varchar(10)      | NO   |     | NULL    |                |
++-----------+------------------+------+-----+---------+----------------+
+---
+
+mysql> describe orders;
++--------------+-------------+------+-----+-------------------+-------+
+| Field        | Type        | Null | Key | Default           | Extra |
++--------------+-------------+------+-----+-------------------+-------+
+| order_number | int(15)     | NO   | PRI | NULL              |       |
+| total_price  | float(8,2)  | NO   |     | NULL              |       |
+| num_items    | int(5)      | NO   |     | NULL              |       |
+| item_id      | varchar(50) | NO   |     | NULL              |       |
+| user_id      | int(10)     | NO   |     | NULL              |       |
+| order_time   | timestamp   | NO   |     | CURRENT_TIMESTAMP |       |
++--------------+-------------+------+-----+-------------------+-------+
