@@ -1,4 +1,4 @@
-# queries to work with the database
+# Queries to work with the database
 ## to access te datatbase
 - servername: earth.cs.utep.edu
 - username: fgarciayala
@@ -6,16 +6,16 @@
 - database: fgarciayala
 
 '''MySQL
-# display car parts
+## dDisplay car parts
   SELECT * FROM parts where something = "filter";
 ---
-# find a custumer
+## Find a custumer
 SELECT * FROM members where  something = "filter";
 ---
-# find price
+## Find price
 SELECT price FROM parts where something = "filter";
 ---
-# insert custumer
+## Insert custumer
 INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
 ---
 
