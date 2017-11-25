@@ -33,35 +33,44 @@
 
       //if on mainpage, display the filtering options.
       if(strcmp($current,"mainpage.php") == 0){
+
       echo "
+            <li>
+              <ul class=\"menu\">
               <li>
-                <div class=\"filtersarea\">
-
-                <div>
-
+                <div class=\"filterDropDown\">
                   <label>Sort by</label>
 
-                  <select>
+                  <select form=\"sortingForm\" name=\"priceSorting\">
                     <option>Price: High to low</option>
                     <option>Price: Low to high</option>
-                    <option>None</option>
+                    <option selected=\"selected\">None</option>
                   </select>
-
                 </div>
-
-                </div>
-
               </li>
       ";
+
+      //get the number of
+
+
+      echo "
+              <li>
+                <div class=\"filterDropDown\">
+                  <form method=\"get\" action=\"$current\" id=\"sortingForm\" style=\"padding:0px;\">
+                    <input type=\"submit\" style=\"padding:0;\" value=\"Apply\">
+                  </form>
+                </div>
+              </li>      
+          ";
+
+
+      
+
+
+      echo "</ul>
+            </li>";
       }
 
-        //give option to go to shopping cart page, cart items are stored in session array.
-        /*echo "
-              <li style=\"float:right;\">
-                <a href=\"checkout.php\">Cart</a>
-              </li>
-            ";
-        */
 
       //if theres an account logged in.
       if((isset($_SESSION['regUsername'])||(isset($_SESSION['adminUsername'])))){
