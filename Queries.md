@@ -7,20 +7,24 @@
 
 
 ### Display car parts
-:::mysql
+```mysql
 ### - SELECT * FROM parts where something = "filter";
+```
 ---
 ### Find a custumer
-:::mysql
+```mysql
 ### - SELECT * FROM members where  something = "filter";
+```
 ---
 ### Find price
-:::mysql
+```mysql
 ### - SELECT price FROM parts where something = "filter";
+```
 ---
 ### Insert custumer
-:::mysql
+```mysql
 ### - INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
+```
 ---
 
 ---
