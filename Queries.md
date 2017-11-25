@@ -5,21 +5,6 @@
 ### - password: cs5339!fgarciayala
 ### - database: fgarciayala
 
-'''mysql
-## Display car parts
-### - SELECT * FROM parts where something = "filter";
----
-## Find a custumer
-### - SELECT * FROM members where  something = "filter";
----
-## Find price
-### - SELECT price FROM parts where something = "filter";
----
-## Insert custumer
-### - INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
----
-
-## Blockquoted header
 mysql> describe members;
 +-----------+------------------+------+-----+---------+----------------+
 | Field     | Type             | Null | Key | Default | Extra          |
@@ -48,3 +33,21 @@ mysql> describe orders;
 | user_id      | int(10)     | NO   |     | NULL              |       |
 | order_time   | timestamp   | NO   |     | CURRENT_TIMESTAMP |       |
 +--------------+-------------+------+-----+-------------------+-------+
+
+
+## Display car parts
+'''mysql
+### - SELECT * FROM parts where something = "filter";
+---
+## Find a custumer
+'''mysql
+### - SELECT * FROM members where  something = "filter";
+---
+## Find price
+'''mysql
+### - SELECT price FROM parts where something = "filter";
+---
+## Insert custumer
+'''mysql
+### - INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
+---
