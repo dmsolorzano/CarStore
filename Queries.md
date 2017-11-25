@@ -1,24 +1,25 @@
 # Queries to work with the database
 ## to access te datatbase
-- servername: earth.cs.utep.edu
-- username: fgarciayala
-- password: cs5339!fgarciayala
-- database: fgarciayala
+### - servername: earth.cs.utep.edu
+### - username: fgarciayala
+### - password: cs5339!fgarciayala
+### - database: fgarciayala
 
-'''MySQL
-## dDisplay car parts
-  SELECT * FROM parts where something = "filter";
+'''mysql
+## Display car parts
+### - SELECT * FROM parts where something = "filter";
 ---
 ## Find a custumer
-SELECT * FROM members where  something = "filter";
+### - SELECT * FROM members where  something = "filter";
 ---
 ## Find price
-SELECT price FROM parts where something = "filter";
+### - SELECT price FROM parts where something = "filter";
 ---
 ## Insert custumer
-INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
+### - INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
 ---
 
+## Blockquoted header
 mysql> describe members;
 +-----------+------------------+------+-----+---------+----------------+
 | Field     | Type             | Null | Key | Default | Extra          |
