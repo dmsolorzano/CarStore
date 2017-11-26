@@ -6,30 +6,29 @@
 ####      $password = "cs5339!fgarciayala";
 ####      $database = "fgarciayala";
 ---
-## Queries to work with the database
+### Queries to work with the database
 
 #### Display car parts
 ```mysql
 SELECT * FROM parts where something = "filter";
 ```
----
+
 #### Find a custumer
 ```mysql
 SELECT * FROM members where  something = "filter";
 ```
----
+
 #### Find price
 ```mysql
 SELECT price FROM parts where something = "filter";
 ```
----
+
 #### Insert custumer
 ```mysql
 INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
 ```
-
-### tables descriptions
 ---
+### tables descriptions
 
 #### mysql> describe members;
 
@@ -46,7 +45,6 @@ INSERT INTO members (id, firstname, lastname, country, state, city, street, zipc
 | password  | varchar(50)      | NO   |     | NULL    |                |
 | privilege | varchar(10)      | NO   |     | NULL    |                |
 
----
 
 #### mysql> describe orders;
 
@@ -58,4 +56,4 @@ INSERT INTO members (id, firstname, lastname, country, state, city, street, zipc
 | item_id      | varchar(50) | NO   |     | NULL              |       |
 | user_id      | int(10)     | NO   |     | NULL              |       |
 | order_time   | timestamp   | NO   |     | CURRENT_TIMESTAMP |       |
-
+---
