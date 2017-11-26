@@ -8,26 +8,25 @@
 
 ### Display car parts
 ```mysql
-### - SELECT * FROM parts where something = "filter";
+SELECT * FROM parts where something = "filter";
 ```
 ---
 ### Find a custumer
 ```mysql
-### - SELECT * FROM members where  something = "filter";
+SELECT * FROM members where  something = "filter";
 ```
 ---
 ### Find price
 ```mysql
-### - SELECT price FROM parts where something = "filter";
+SELECT price FROM parts where something = "filter";
 ```
 ---
 ### Insert custumer
 ```mysql
-### - INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
+INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
 ```
 ---
-
----
+####
 mysql> describe members;
 +-----------+------------------+------+-----+---------+----------------+
 | Field     | Type             | Null | Key | Default | Extra          |
