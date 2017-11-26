@@ -1,6 +1,6 @@
 ## Working with the database
 
-### Access te database
+### Access the database
 
 ####      $servername = "earth.cs.utep.edu";
 ####      $username = "fgarciayala";
