@@ -1,11 +1,12 @@
-## Queries to work with the database
+## Working with the database
 ### to access te datatbase
+
+####      $servername = "earth.cs.utep.edu";
+####      $username = "fgarciayala";
+####      $password = "cs5339!fgarciayala";
+####      $database = "fgarciayala";
 ---
-#### $servername = "earth.cs.utep.edu";
-#### $username = "fgarciayala";
-#### $password = "cs5339!fgarciayala";
-#### $database = "fgarciayala";
----
+## Queries to work with the database
 
 #### Display car parts
 ```mysql
@@ -26,6 +27,8 @@ SELECT price FROM parts where something = "filter";
 ```mysql
 INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
 ```
+
+### tables descriptions
 ---
 
 #### mysql> describe members;
