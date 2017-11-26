@@ -106,4 +106,15 @@ INSERT INTO members (id, firstname, lastname, country, state, city, street, zipc
 | HighZip   | int(6)      | YES  |     | NULL    |       |
 
 
+
+#### mysql> describe ZiptoZone;
+
+| Field      | Type    | Null | Key | Default | Extra |
+|------------+---------+------+-----+---------+-------|
+| LowZip     | int(5)  | YES  |     | NULL    |       |
+| HighZip    | int(5)  | YES  |     | NULL    |       |
+| ZoneGround | int(11) | YES  |     | NULL    |       |
+
+
+
 ---
