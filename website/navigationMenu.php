@@ -43,7 +43,7 @@
                 <div class=\"filterDropDown\">
                   <label>Order by</label>
 
-                  <select form=\"sortingForm\" name=\"priceSorting\">
+                  <select form=\"sortingForm\" name=\"ordering\">
                     <option>Price: High to low</option>";
                     echo
                     "<option>Price: Low to high</option>";
