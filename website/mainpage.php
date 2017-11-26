@@ -18,7 +18,6 @@ $currentPage = $_SESSION['currentPage'];
 $numResults = 0;
 $where = "";
 $order = "";
-$table = "inventory";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 

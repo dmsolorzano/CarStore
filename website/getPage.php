@@ -18,8 +18,8 @@
 		while($row = $result->fetch_assoc()){
 			echo "<li>";
 
-			echo '<img src="http://localhost:8080/CarStore/website/partimages/' . $row['Associated_image_filename1'] . '"/>';
-			echo $row['PartName'] . $row['Price'];
+			echo '<img src="/partimages/' . $row['associatedImageFilename1'] . '"/>';
+			echo $row['partName'] . $row['price'];
 
 			echo "<br/>";
 			echo "</li>";

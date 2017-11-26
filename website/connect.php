@@ -3,16 +3,31 @@
 
 $errors = array();
 
+/*
 $host = 'localhost:3306';
 $user = 'root';
 $password = '';
 $database = 'mydb';
+*/
 
-//do not change 
-$table = "inventory";
+
+
+$servername = "earth.cs.utep.edu";
+
+$username = "fgarciayala";
+
+$password = "cs5339!fgarciayala";
+
+$database = "fgarciayala";
+ 
+$table = "parts";
+
+
+
+/*
 $salt = "123456789";//set 11/1/2017
 $hashtype = "md5";
-
+*/
 
 $db = mysqli_connect($host, $user, $password, $database);
 
