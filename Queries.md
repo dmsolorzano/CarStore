@@ -27,7 +27,7 @@ INSERT INTO members (id, firstname, lastname, country, state, city, street, zipc
 ```
 ---
 
-####mysql> describe members;
+#### mysql> describe members;
 
 | Field     | Type             | Null | Key | Default | Extra          |
 |-----------|:----------------:|:----:|:---:|:-------:|:--------------:|
@@ -44,14 +44,14 @@ INSERT INTO members (id, firstname, lastname, country, state, city, street, zipc
 
 ---
 
-####mysql> describe orders;
-+--------------+-------------+------+-----+-------------------+-------+
+#### mysql> describe orders;
+
 | Field        | Type        | Null | Key | Default           | Extra |
-+--------------+-------------+------+-----+-------------------+-------+
+|--------------|:-----------:|:----:|:---:|:-----------------:|:-----:|
 | order_number | int(15)     | NO   | PRI | NULL              |       |
 | total_price  | float(8,2)  | NO   |     | NULL              |       |
 | num_items    | int(5)      | NO   |     | NULL              |       |
 | item_id      | varchar(50) | NO   |     | NULL              |       |
 | user_id      | int(10)     | NO   |     | NULL              |       |
 | order_time   | timestamp   | NO   |     | CURRENT_TIMESTAMP |       |
-+--------------+-------------+------+-----+-------------------+-------+
+
