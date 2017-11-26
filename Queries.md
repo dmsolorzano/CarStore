@@ -1,15 +1,13 @@
-## Working with the database
-|| <!-- empty table header -->
-|:--:| <!-- table header/body separator with center formatting -->
-| I'm centered! | <!-- cell gets column's alignment -->
-### to access te datatbase
+##                                          Working with the database
+
+###             Access te datatbase
 
 ####      $servername = "earth.cs.utep.edu";
 ####      $username = "fgarciayala";
 ####      $password = "cs5339!fgarciayala";
 ####      $database = "fgarciayala";
 ---
-### Queries to work with the database
+###             Queries to work with the database
 
 #### Display car parts
 ```mysql
@@ -31,7 +29,7 @@ SELECT price FROM parts where something = "filter";
 INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
 ```
 ---
-### tables descriptions
+###             Tables descriptions
 
 #### mysql> describe members;
 
