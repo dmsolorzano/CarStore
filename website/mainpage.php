@@ -76,14 +76,61 @@ if($result){
 $maxItemsPerPage = 10;//later might give options to change this.
 $numPages = ceil($numResults/$maxItemsPerPage);  
 
-echo $numResults . " items found in category. <br/>";
-echo "would require " . $numPages . " pages of " . $maxItemsPerPage . " results per page <br/>";
+
+//RESULTSBLOCK
+echo "<div class=\"resultsBlock\">";
+
+echo "<ul class=\"resultRow\">";
+		echo "<li>hello there</li>";
+		echo "<li>mahalo</li>";
+echo "</ul>";
+
+echo "</div>";//RESULTSBLOCK
+
+
+
+//PAGINATION
+
+echo "<div class=\"paginationBlock\">";
+
+echo "
+<div class=\"pagination\">
+  <a href=\"#\">&laquo;</a>
+  <a href=\"#\">1</a>
+  <a href=\"#\" class=\"active\">2</a>
+  <a href=\"#\">3</a>
+  <a href=\"#\">4</a>
+  <a href=\"#\">5</a>
+  <a href=\"#\">6</a>
+  <a href=\"#\">&raquo;</a>
+</div>
+";
+
+echo "</div>";//END PAGINATION
 
 echo '
 	</div>
 </body>
 
-<script></script>
+<script>
+
+function getPage(pageNum) {
+  var xhttp;
+  if (pageNum == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+
+</script>
 
 </html>
 ';
