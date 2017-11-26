@@ -85,7 +85,7 @@ INSERT INTO members (id, firstname, lastname, country, state, city, street, zipc
 #### mysql> describe UPSGroundWeightZonePrice;
 
 | Field  | Type       | Null | Key | Default | Extra |
-:--------:------------:------:-----:---------:-------:
+|--------|------------|------|-----|---------|-------|
 | weight | int(3)     | YES  |     | NULL    |       |
 | zone2  | float(7,2) | YES  |     | NULL    |       |
 | zone3  | float(7,2) | YES  |     | NULL    |       |
