@@ -1,9 +1,9 @@
 ### Queries to work with the database
 #### to access te datatbase
-#### - servername: earth.cs.utep.edu
-#### - username: fgarciayala
-#### - password: cs5339!fgarciayala
-#### - database: fgarciayala
+#### $servername = "earth.cs.utep.edu";
+#### $username = "fgarciayala";
+#### $password = "cs5339!fgarciayala";
+#### $database = "fgarciayala";
 
 
 #### Display car parts
