@@ -57,4 +57,29 @@ INSERT INTO members (id, firstname, lastname, country, state, city, street, zipc
 | item_id      | varchar(50) | NO   |     | NULL              |       |
 | user_id      | int(10)     | NO   |     | NULL              |       |
 | order_time   | timestamp   | NO   |     | CURRENT_TIMESTAMP |       |
+
+#### mysql> describe parts;
+
+| Field                    | Type             | Null | Key | Default | Extra          |
+|--------------------------|------------------|------|-----|---------|----------------|
+| partID                   | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| partName                 | varchar(100)     | NO   |     | NULL    |                |
+| partNumber               | varchar(15)      | NO   |     | NULL    |                |
+| suppliers                | varchar(15)      | YES  |     | NULL    |                |
+| category                 | varchar(50)      | YES  |     | NULL    |                |
+| description01            | varchar(200)     | YES  |     | NULL    |                |
+| description02            | varchar(200)     | YES  |     | NULL    |                |
+| description03            | varchar(200)     | YES  |     | NULL    |                |
+| description04            | varchar(200)     | YES  |     | NULL    |                |
+| description05            | varchar(200)     | YES  |     | NULL    |                |
+| description06            | varchar(200)     | YES  |     | NULL    |                |
+| price                    | float(6,2)       | YES  |     | NULL    |                |
+| estimatedShippingCost    | float(4,2)       | YES  |     | NULL    |                |
+| associatedImageFilename1 | varchar(100)     | YES  |     | NULL    |                |
+| associatedImageFilename2 | varchar(100)     | YES  |     | NULL    |                |
+| associatedImageFilename3 | varchar(100)     | YES  |     | NULL    |                |
+| associatedImageFilename4 | varchar(100)     | YES  |     | NULL    |                |
+| notes                    | varchar(100)     | YES  |     | NULL    |                |
+| shippingWeight           | int(4)           | YES  |     | NULL    |                |
+
 ---
