@@ -1,33 +1,33 @@
-## Queries to work with the database
-### to access te datatbase
-### - servername: earth.cs.utep.edu
-### - username: fgarciayala
-### - password: cs5339!fgarciayala
-### - database: fgarciayala
+### Queries to work with the database
+#### to access te datatbase
+#### - servername: earth.cs.utep.edu
+#### - username: fgarciayala
+#### - password: cs5339!fgarciayala
+#### - database: fgarciayala
 
 
-### Display car parts
+#### Display car parts
 ```mysql
 SELECT * FROM parts where something = "filter";
 ```
 ---
-### Find a custumer
+#### Find a custumer
 ```mysql
 SELECT * FROM members where  something = "filter";
 ```
 ---
-### Find price
+#### Find price
 ```mysql
 SELECT price FROM parts where something = "filter";
 ```
 ---
-### Insert custumer
+#### Insert custumer
 ```mysql
 INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
 ```
 ---
-####
-mysql> describe members;
+
+####mysql> describe members;
 +-----------+------------------+------+-----+---------+----------------+
 | Field     | Type             | Null | Key | Default | Extra          |
 +-----------+------------------+------+-----+---------+----------------+
@@ -44,7 +44,7 @@ mysql> describe members;
 +-----------+------------------+------+-----+---------+----------------+
 ---
 
-mysql> describe orders;
+####mysql> describe orders;
 +--------------+-------------+------+-----+-------------------+-------+
 | Field        | Type        | Null | Key | Default           | Extra |
 +--------------+-------------+------+-----+-------------------+-------+
