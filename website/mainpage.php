@@ -18,6 +18,8 @@ $currentPage = $_SESSION['currentPage'];
 $numResults = 0;
 $where = "";
 $order = "";
+$table = "inventory";
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	switch($_POST['ordering']){
@@ -40,7 +42,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$filtering = $where . $order;
 }
                   
-$query = "SELECT * FROM inventory $where $order";
+$query = "SELECT * FROM $table $where $order";
+
+$_SESSION['query'] = $query;
+
 $result = mysqli_query($db, $query);
 
 if($result){
@@ -50,7 +55,7 @@ if($result){
 $maxItemsPerPage = 10;//later might give options to change this.
 $totalPages = ceil($numResults/$maxItemsPerPage);  
 
-//echo $totalPages . " total pages";
+echo $query;
 
 //initialize the header of the html.
 echo "
@@ -60,8 +65,7 @@ echo "
 	<title>CarStore</title>
 	<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">
 </head>
-<body onload=\"drawPagination(" . $currentPage . ", " . $totalPages . ");\">
-";
+<body onload=\"drawPagination($currentPage , $totalPages,  $maxItemsPerPage);\">  ";
 
 //the body starts here.
 
@@ -74,28 +78,47 @@ echo '
 //display the dynamic navigation bar.
 require_once('navigationMenu.php');
 
-echo '
-	<div class="content">	
-		<h2>display item blocks here</h2><br/>
-';
+echo "
+	<div class=\"content\">	
+		<h2>";
 
-//RESULTSBLOCK
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+			if((strcmp($_POST['category'], "All") == 0)){
+				echo "Category: All, ";
+			}else{
+				echo "Category: " . $_POST['category'] . ", ";
+			}
+
+			if(!(strcmp($_POST['ordering'], "") == 0))
+				echo "Ordering: " . $_POST['ordering'];
+		}else{
+			echo "Displaying All";
+		}
+
+echo "</h2><br/>
+";
+
+//RESULTSBLOCK START
 echo "<div class=\"resultsBlock\">";
 
 echo "<ul class=\"resultRow\" id=\"itemsList\">";
 
-	//list will be populated by ajax in here.	
+	//ITEMS ROWS DISPLAYED BY JAVASCRIPT HERE.	
 	
 echo "</ul>";
 
-echo "</div>";//RESULTSBLOCK
+echo "</div>";
+//RESULTSBLOCK END
 
-//PAGINATION
+
+//PAGINATION START
 echo "<div class=\"paginationBlock\" id=\"paginationBlock\">";
 
-	//draw pagination bar here
+	//PAGINATION BAR DISPLAYED BY JAVASCRIPT HERE.
 
-echo "</div>";//END PAGINATION
+echo "</div>";
+//PAGINATION END
+
 
 echo "
 	</div>
@@ -115,9 +138,7 @@ function getPage(destination, totalPages, maxItemsPerPage) {
     }
   };
 
-  drawPagination(destination, totalPages, maxItemsPerPage);
-
-  xhttp.open(\"GET\", \"getPage.php\", true);
+  xhttp.open(\"GET\", \"getPage.php?destination=\" + destination + \"&totalPages=\" + totalPages + \"&maxItemsPerPage=\" + maxItemsPerPage, true);
   xhttp.send();
 }
 
@@ -134,6 +155,8 @@ function drawPagination(currentPage, totalPages, maxItemsPerPage) {
     }
   };
 
+  getPage(currentPage, totalPages, maxItemsPerPage);
+
   xhttp.open(\"GET\", \"drawPagination.php?currentPage=\" + currentPage + \"&totalPages=\" + totalPages + \"&maxItemsPerPage=\" + maxItemsPerPage, true);
   xhttp.send();
 }
@@ -144,7 +167,5 @@ echo "
 
 </html>
 ";
-
-//?currentPage=\" + currentPage + \"&totalPages=\" + totalPages + \"&maxItemsPerPage=\" + maxItemsPerPage
 
 ?>
