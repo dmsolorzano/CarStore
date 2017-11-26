@@ -1,6 +1,6 @@
-##                                          Working with the database
+## ------ Working with the database ------
 
-### ------ Access te datatbase ------
+### ------ Access te database ------
 
 ####      $servername = "earth.cs.utep.edu";
 ####      $username = "fgarciayala";
@@ -14,7 +14,7 @@
 SELECT * FROM parts where something = "filter";
 ```
 
-#### Find a custumer
+#### Find a customer
 ```mysql
 SELECT * FROM members where  something = "filter";
 ```
@@ -24,7 +24,7 @@ SELECT * FROM members where  something = "filter";
 SELECT price FROM parts where something = "filter";
 ```
 
-#### Insert custumer
+#### Insert customer
 ```mysql
 INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
 ```
