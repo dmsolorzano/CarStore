@@ -28,9 +28,9 @@ INSERT INTO members (id, firstname, lastname, country, state, city, street, zipc
 ---
 
 ####mysql> describe members;
-+-----------+------------------+------+-----+---------+----------------+
+
 | Field     | Type             | Null | Key | Default | Extra          |
-+-----------+------------------+------+-----+---------+----------------+
+|-----------|:----------------:|:----:|:---:|:-------:|:--------------:|
 | id        | int(20) unsigned | NO   | PRI | NULL    | auto_increment |
 | firstname | varchar(30)      | NO   |     | NULL    |                |
 | lastname  | varchar(30)      | NO   |     | NULL    |                |
@@ -41,7 +41,7 @@ INSERT INTO members (id, firstname, lastname, country, state, city, street, zipc
 | zipcode   | int(20)          | NO   |     | NULL    |                |
 | password  | varchar(50)      | NO   |     | NULL    |                |
 | privilege | varchar(10)      | NO   |     | NULL    |                |
-+-----------+------------------+------+-----+---------+----------------+
+
 ---
 
 ####mysql> describe orders;
