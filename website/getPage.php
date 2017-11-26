@@ -16,14 +16,18 @@
 	if($result){
 
 		while($row = $result->fetch_assoc()){
+			echo "<li>";
 			foreach ($row as $key => $value) {
+
 				if(strcmp($key, "PartName") == 0)
-					echo $key . " -> " . $value . ",  ";
+					echo  "<strong>" . $value . "  </strong>";
 				
 				if(strcmp($key, "Price") == 0)
-					echo $key . " -> " . $value . ",  ";
+					echo "<p style=\"float:right;\">Price: " . $value . "</p>";
+
 			}
 			echo "<br/>";
+			echo "</li>";
 		}
 
 	}
