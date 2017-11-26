@@ -11,7 +11,7 @@
 
 #### Display car parts
 ```mysql
-SELECT "columns to be displayed" FROM parts where something = "filter" order by "sorting";
+SELECT "columns to be displayed" FROM parts where something = "filter" order by "sorting" ASC;
 ```
 
 #### Find a customer
