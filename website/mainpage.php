@@ -50,6 +50,7 @@ if($result){
 $maxItemsPerPage = 10;//later might give options to change this.
 $totalPages = ceil($numResults/$maxItemsPerPage);  
 
+//echo $totalPages . " total pages";
 
 //initialize the header of the html.
 echo "

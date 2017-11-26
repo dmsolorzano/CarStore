@@ -12,10 +12,10 @@ echo "
 
 	
 	//special boundary cases
-	if(($currentPage < 7) || (($currentPage + 7) > $totalPages)){
+	if(($currentPage < 7) || (($currentPage + 3) > $totalPages)){
 
 		if($currentPage < 7){
-			for($j = 1; $j <= 7; $j++){
+			for($j = 1; ($j <= 7)&&(!($j > $totalPages)); $j++){
 				if($j == $currentPage){
 					echo "<a href=\"#\" class=\"active\" onclick=\"getPage($j, $totalPages, $maxItemsPerPage);\">" . $j . "</a>";
 				}else{
@@ -23,10 +23,22 @@ echo "
 				}
 
 			}
+		}else{
+		if(($currentPage + 3) > $totalPages){
+			for($j = ($totalPages - 6); ($j <= $totalPages); $j++){
+				if($j == $currentPage){
+					echo "<a href=\"#\" class=\"active\" onclick=\"getPage($j, $totalPages, $maxItemsPerPage);\">" . $j . "</a>";
+				}else{
+					echo "<a href=\"#\" onclick=\"getPage($j, $totalPages, $maxItemsPerPage);\">" . $j . "</a>";
+				}
+
+			}
+
+		}
 		}
 		
 	}else{//current page should always be centered in the pagination tab.
-		for($i = ($currentPage - 3); $i<=($currentPage + 3); $i++){
+		for($i = ($currentPage - 3); ($i<=($currentPage + 3))&&($i<=$totalPages); $i++){
 			if($i == $currentPage){
 				echo "<a href=\"#\" class=\"active\" onclick=\"getPage($i, $totalPages, $maxItemsPerPage);\">" . $i . "</a>";
 			}else{
