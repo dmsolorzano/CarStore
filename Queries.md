@@ -1,4 +1,7 @@
 ## Working with the database
+|| <!-- empty table header -->
+|:--:| <!-- table header/body separator with center formatting -->
+| I'm centered! | <!-- cell gets column's alignment -->
 ### to access te datatbase
 
 ####      $servername = "earth.cs.utep.edu";
