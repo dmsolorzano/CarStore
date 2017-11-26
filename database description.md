@@ -11,22 +11,29 @@
 
 #### Display car parts
 ```mysql
-SELECT "columns to be displayed" FROM parts where something = "filter" order by "sorting" ASC;
+SELECT "columns to be displayed" FROM parts where $something = $filter order by $sorting $ASCorDESC;
 ```
 
 #### Find a customer
 ```mysql
-SELECT * FROM members where  something = "filter";
+SELECT * FROM members where $something = $filter;
 ```
 
 #### Find price
 ```mysql
-SELECT price FROM parts where something = "filter";
+SELECT price FROM parts where $something = $filter;
 ```
 
 #### Insert customer
 ```mysql
-INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) VALUES();
+INSERT INTO members (id, firstname, lastname, country, state, city, street, zipcode, password, privilege) 
+VALUES($id, $firstname, $lastname, $country, $state, $city, $street, $zipcode, $password, $privilege);
+```
+
+#### insert into orders
+```mysql
+INSERT INTO orders (order_number, total_price, num_itmes, item_id, user_id, order_time) 
+VALUES (unique_id, $total_price, $num_items, $item_id, $user_id, $order_time);
 ```
 ---
 ### Tables descriptions
