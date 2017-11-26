@@ -82,4 +82,19 @@ INSERT INTO members (id, firstname, lastname, country, state, city, street, zipc
 | notes                    | varchar(100)     | YES  |     | NULL    |                |
 | shippingWeight           | int(4)           | YES  |     | NULL    |                |
 
+#### mysql> describe UPSGroundWeightZonePrice;
+
+| Field  | Type       | Null | Key | Default | Extra |
+:--------:------------:------:-----:---------:-------:
+| weight | int(3)     | YES  |     | NULL    |       |
+| zone2  | float(7,2) | YES  |     | NULL    |       |
+| zone3  | float(7,2) | YES  |     | NULL    |       |
+| zone4  | float(7,4) | YES  |     | NULL    |       |
+| zone5  | float(7,2) | YES  |     | NULL    |       |
+| zone6  | float(7,2) | YES  |     | NULL    |       |
+| zone7  | float(7,4) | YES  |     | NULL    |       |
+| zone8  | float(7,2) | YES  |     | NULL    |       |
+
+
+
 ---
