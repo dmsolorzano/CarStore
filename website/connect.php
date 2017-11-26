@@ -9,7 +9,7 @@ $password = '';
 $database = 'mydb';
 
 //do not change 
-$table = "records";
+$table = "inventory";
 $salt = "123456789";//set 11/1/2017
 $hashtype = "md5";
 

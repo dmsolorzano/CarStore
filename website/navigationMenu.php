@@ -34,29 +34,63 @@
       //if on mainpage, display the filtering options.
       if(strcmp($current,"mainpage.php") == 0){
 
+
+      //ORDER BY PRICE DROPDOWN
       echo "
             <li>
               <ul class=\"menu\">
               <li>
                 <div class=\"filterDropDown\">
-                  <label>Sort by</label>
+                  <label>Order by</label>
 
                   <select form=\"sortingForm\" name=\"priceSorting\">
-                    <option>Price: High to low</option>
-                    <option>Price: Low to high</option>
-                    <option selected=\"selected\">None</option>
+                    <option>Price: High to low</option>";
+                    echo
+                    "<option>Price: Low to high</option>";
+                    echo 
+                    "<option selected=\"selected\">None</option>
                   </select>
                 </div>
               </li>
       ";
 
-      //get the number of
 
-
+      //CATEGORY DROPDOWN
       echo "
               <li>
                 <div class=\"filterDropDown\">
-                  <form method=\"get\" action=\"$current\" id=\"sortingForm\" style=\"padding:0px;\">
+                  <label>Category</label>
+
+                  <select form=\"sortingForm\" name=\"category\">
+                  <option selected=\"selected\">All</option>
+            ";
+
+                  //query the database for all current categories
+                  $query = "SELECT DISTINCT Category FROM inventory";
+                  $result = mysqli_query($db, $query);
+
+                  if($result){
+                    while($row = $result->fetch_assoc()){
+                      foreach($row as $key=>$value){
+                        echo "<option>$value</option>";
+                      }
+                    } 
+                  }else{
+                    //for now
+                    echo "<option>couldnt connect to db</option>";
+                  }
+              
+      echo "
+                  </select>
+                </div>
+              </li>
+          ";
+
+      //APPLY BUTTON
+      echo "
+              <li>
+                <div class=\"filterDropDown\">
+                  <form method=\"post\" action=\"$current\" id=\"sortingForm\" style=\"padding:0px;\">
                     <input type=\"submit\" style=\"padding:0;\" value=\"Apply\">
                   </form>
                 </div>
@@ -64,18 +98,15 @@
           ";
 
 
-      
-
-
       echo "</ul>
             </li>";
       }
 
 
-      //if theres an account logged in.
+      //OPTIONS WHEN LOGGED IN
       if((isset($_SESSION['regUsername'])||(isset($_SESSION['adminUsername'])))){
 
-        //otherwise, user is signed in, display a "signout" button.
+        //user is signed in, display a "signout" button.
         echo "<li style=\"float:right;\">
                   <form class=\"menu\" method=\"post\" action=\"$current\">
                         <button type=\"submit\" name=\"signout\" value=\"Sign Out\">
