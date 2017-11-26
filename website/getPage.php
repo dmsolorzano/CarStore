@@ -17,15 +17,10 @@
 
 		while($row = $result->fetch_assoc()){
 			echo "<li>";
-			foreach ($row as $key => $value) {
 
-				if(strcmp($key, "PartName") == 0)
-					echo  "<strong>" . $value . "  </strong>";
-				
-				if(strcmp($key, "Price") == 0)
-					echo "<p style=\"float:right;\">Price: " . $value . "</p>";
+			echo '<img src="http://localhost:8080/CarStore/website/partimages/' . $row['Associated_image_filename1'] . '"/>';
+			echo $row['PartName'] . $row['Price'];
 
-			}
 			echo "<br/>";
 			echo "</li>";
 		}
