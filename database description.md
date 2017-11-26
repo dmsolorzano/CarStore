@@ -96,5 +96,14 @@ INSERT INTO members (id, firstname, lastname, country, state, city, street, zipc
 | zone8  | float(7,2) | YES  |     | NULL    |       |
 
 
+#### mysql> describe ZiptoState;
+
+| Field     | Type        | Null | Key | Default | Extra |
+|-----------|-------------|------|-----|---------|-------|
+| StateName | varchar(50) | YES  |     | NULL    |       |
+| StateAbrv | varchar(2)  | YES  |     | NULL    |       |
+| LowZip    | int(6)      | YES  |     | NULL    |       |
+| HighZip   | int(6)      | YES  |     | NULL    |       |
+
 
 ---
