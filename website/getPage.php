@@ -18,7 +18,7 @@
 		while($row = $result->fetch_assoc()){
 			echo "<li>";
 
-			echo '<img src="/partimages/' . $row['associatedImageFilename1'] . '"/>';
+			echo '<img src="partimages/' . $row['associatedImageFilename1'] . '"/>';
 			echo $row['partName'] . $row['price'];
 
 			echo "<br/>";

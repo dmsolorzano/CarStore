@@ -66,7 +66,7 @@
             ";
 
                   //query the database for all current categories
-                  $query = "SELECT DISTINCT Category FROM inventory";
+                  $query = "SELECT DISTINCT Category FROM parts";
                   $result = mysqli_query($db, $query);
 
                   if($result){
