@@ -113,6 +113,8 @@
                   </form>
               </li>";
 
+
+              
   			//both admins and regular users can visit the normal users area.
   			if((isset($_SESSION['regUsername']))||(isset($_SESSION['adminUsername']))){
   				
@@ -121,12 +123,13 @@
   				echo "<li style=\"float:right;\"><a href=\"user.php\">Users page</a></li>";
   			}
 
+
         //only admins can navigate to admins page.
   			if((isset($_SESSION['adminUsername']))){
 
           //only show button if currently not in admins page.
   				if(strcmp($current, "admin.php") != 0)
-  				echo "<li style=\"float:right;\"><a href=\"admin.php\">Admins page</a></li>";
+  				echo "<li style=\"float:right;\"><a href=\"admin.php\">Admins Page</a></li>";
   			}
 
         //user is signed in, print a greeting.
