@@ -3,15 +3,15 @@
 
 $errors = array();
 
-/*
+
 $host = 'localhost:3306';
 $user = 'root';
 $password = '';
-$database = 'mydb';
-*/
+$database = 'carstore';
+$parts = 'parts';
 
 
-
+/*
 $servername = "earth.cs.utep.edu";
 
 $username = "fgarciayala";
@@ -20,8 +20,8 @@ $password = "cs5339!fgarciayala";
 
 $database = "fgarciayala";
  
-$table = "parts";
-
+$parts = "parts";
+*/
 
 
 /*

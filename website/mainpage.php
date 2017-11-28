@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$filtering = $where . $order;
 }
                   
-$query = "SELECT * FROM $table $where $order";
+$query = "SELECT * FROM $parts $where $order";
 
 $_SESSION['query'] = $query;
 
@@ -54,7 +54,7 @@ if($result){
 $maxItemsPerPage = 10;//later might give options to change this.
 $totalPages = ceil($numResults/$maxItemsPerPage);  
 
-echo $query;
+//echo $query;
 
 //initialize the header of the html.
 echo "
