@@ -22,15 +22,15 @@ CREATE TABLE parts (
 
 CREATE TABLE members (
     `id` INT(20)UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `username` VARCHAR(30) NOT NULL,
     `firstname` VARCHAR(30) NOT NULL,
     `lastname` VARCHAR(30) NOT NULL,
-    `country` VARCHAR(30) NOT NULL,
-    `state` VARCHAR(30) NOT NULL,
-    `city` VARCHAR(30) NOT NULL,
-    `street` VARCHAR(30) NOT NULL,
-    `zipcode` INT(20) NOT NULL,
+    `email` VARCHAR(30) NOT NULL,
+    `hashtype` VARCHAR(20) NOT NULL, 
+    `datecreated` VARCHAR(20) NOT NULL,
+    `lastaccess` VARCHAR(20) NOT NULL,
     `password` VARCHAR(50) NOT NULL,
-    `privilege` VARCHAR(10) NOT NULL
+    `rights` VARCHAR(10) NOT NULL
 );
 
 CREATE TABLE orders (
@@ -39,6 +39,11 @@ CREATE TABLE orders (
     `num_items` INT(5) NOT NULL,
     `item_id` VARCHAR(50) NOT NULL,
     `user_id` INT(10) NOT NULL,
+    `country` VARCHAR(30) NOT NULL,
+    `state` VARCHAR(30) NOT NULL,
+    `city` VARCHAR(30) NOT NULL,
+    `street` VARCHAR(30) NOT NULL,
+    `zipcode` INT(20) NOT NULL,
     `order_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
