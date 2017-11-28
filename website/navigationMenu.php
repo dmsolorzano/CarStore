@@ -35,12 +35,12 @@
       if(strcmp($current,"mainpage.php") == 0){
 
 
-      //ORDER BY PRICE DROPDOWN
+      //ORDER BY PRICE DROPDOWN   //problem in line 41
       echo "
-            <li>
-              <ul class=\"menu\">
-              <li>
-                <div class=\"filterDropDown\">
+            <li style=\" width:50%;\">
+              <ul class=\"filterSection\"> 
+              <li >
+                <div class=\"filterDropDown\" >
                   <label>Order by</label>
 
                   <select form=\"sortingForm\" name=\"ordering\">
@@ -77,7 +77,7 @@
                     } 
                   }else{
                     //for now
-                    echo "<option>couldnt connect to db</option>";
+                    echo "<option>couldn't connect to db</option>";
                   }
               
       echo "
@@ -107,11 +107,9 @@
       if((isset($_SESSION['regUsername'])||(isset($_SESSION['adminUsername'])))){
 
         //user is signed in, display a "signout" button.
-        echo "<li style=\"float:right;\">
-                  <form class=\"menu\" method=\"post\" action=\"$current\">
-                        <button type=\"submit\" name=\"signout\" value=\"Sign Out\">
-                          Sign Out
-                        </button>
+        echo "<li style=\"float:right; display:inline;\">
+                  <form class=\"signout\" method=\"post\" action=\"$current\" >
+                        <input type=\"submit\" name=\"signout\" value=\"Sign Out\">
                   </form>
               </li>";
 
@@ -135,7 +133,7 @@
         if((isset($_SESSION['adminUsername']))){
           echo "<li style=\"float:right;\"><strong style=\" display: block; color: orange; text-align: center; padding: 14px 16px;\">Hi " . $_SESSION['adminUsername']  . "!</strong></li>";
         }else{
-          echo "<li style=\"float:right;\"><strong style=\" display: block; color: orange; text-align: center; padding: 14px 16px;\">Hi " . $_SESSION['regUsername']  . "</strong></li>";
+          echo "<li style=\"float:right;\"><strong style=\" display: block; color: orange; text-align: center; padding: 14px 16px;\">Signed in as: " . $_SESSION['regUsername']  . "</strong></li>";
         }
   		}
   		

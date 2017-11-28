@@ -20,8 +20,8 @@ if (isset($_POST['login_user'])) {
 	if (count($errors) == 0) {
 		$accessdate = date("D, F j, Y, g:i a");
 		$password = md5($password);
-		$query = "SELECT * FROM $table WHERE username='$username' AND password='$password'";
-		$updatequery = "UPDATE $table SET lastaccess = '$accessdate' WHERE username = '$username'";
+		$query = "SELECT * FROM $members WHERE username='$username' AND password='$password'";
+		$updatequery = "UPDATE $members SET lastaccess = '$accessdate' WHERE username = '$username'";
 		$results = mysqli_query($db, $query);
 
 		if ((mysqli_num_rows($results) > 0)) {
@@ -34,16 +34,18 @@ if (isset($_POST['login_user'])) {
 				}
 			}
 
+
+			//if we need to direct users to one page and admins to another.
 			if(!$isAdmin){
 				$_SESSION['regUsername'] = $username;
 				$_SESSION['password'] = $password;
 				$_SESSION['success'] = "You are now logged in as a user";
-				header('location: user.php');
+				header('location: mainpage.php');//could redirect to user.php
 			}else{
 				$_SESSION['adminUsername'] = $username;
 				$_SESSION['password'] = $password;
 				$_SESSION['success'] = "You are now logged in as an administrator";
-				header('location: admin.php');
+				header('location: mainpage.php');//could redirect to admin.php
 			}
 		}else {
 			$_SESSION['errormsg'] = "Wrong username or password";
@@ -89,8 +91,6 @@ echo '
 		</div>
 	</div>
 ';
-
-		//session_start();
 
 		if(isset($_SESSION['errormsg']))
 		echo "<div style=\"width:100%; text-align:center; color:red;\"> <h2> ". $_SESSION['errormsg'] ." </h2> </div>";

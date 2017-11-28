@@ -31,8 +31,8 @@ if (isset($_POST['reg_user'])) {
 
 	}
 
-	//check for username uniqueness
-	$checkdupquery = "SELECT * FROM $table WHERE username = '$username'";
+	//check that the username doesn't already exist in the db.
+	$checkdupquery = "SELECT * FROM $members WHERE username = '$username'";
 	$dups = mysqli_query($db, $checkdupquery);
 
 	if(mysqli_num_rows($dups) > 0){
@@ -45,7 +45,7 @@ if (isset($_POST['reg_user'])) {
 		//salt the password
 		$password = $salt . $password1 . $username; 
 		$password = md5($password);
-		$query = "INSERT INTO $table (username, firstname, lastname, email, hashtype, datecreated, lastaccess, password, rights) 
+		$query = "INSERT INTO $members (username, firstname, lastname, email, hashtype, datecreated, lastaccess, password, rights) 
 				  VALUES('$username', '$firstname', '$lastname', '$email', '$hashtype', '$datecreated', '$lastaccess', '$password', 'user')";
 		$outcome = mysqli_query($db, $query);
 		if($outcome){
@@ -81,7 +81,7 @@ echo '
 
 echo '
 	
-	<form method="post" action="userReg.php" >
+	<form method="post" action="signup.php" >
 
 	<div style="width:100%; text-align:center;"> <h2>New User Registration</h2> </div>
 

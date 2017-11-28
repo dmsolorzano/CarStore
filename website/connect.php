@@ -9,7 +9,7 @@ $user = 'root';
 $password = '';
 $database = 'carstore';
 $parts = 'parts';
-
+$members = 'members';
 
 /*
 $servername = "earth.cs.utep.edu";
@@ -23,11 +23,9 @@ $database = "fgarciayala";
 $parts = "parts";
 */
 
-
-/*
 $salt = "123456789";//set 11/1/2017
 $hashtype = "md5";
-*/
+
 
 $db = mysqli_connect($host, $user, $password, $database);
 
