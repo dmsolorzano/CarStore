@@ -32,7 +32,7 @@ with JavaScript in addition to the server validation.
 
 ###### The tasks could be separated into several tasks: ######
 
-- [ ] Display car parts: There should be options for sorting, filtering and
+- [x] (DANIEL) Display car parts: There should be options for sorting, filtering and
 display. Sorting refers to the order of the display information. Filtering
 is selecting only some rows of the database of parts. Display options
 is the selection of which columns of the database to display. Parts
@@ -58,7 +58,7 @@ customers. Some demo on this topic will be presented in class.
 the shipping prices table. deleting a customer, or modifying customers
 addresses and passwords.
 
-- [ ] Integration: Designing and implementing the consistent look and feel.
+- [x] (DANIEL) Integration: Designing and implementing the consistent look and feel.
 You could decide to separate the tasks differently, or have a different number
 of tasks. Each of your tasks should have a team member that has the main
 responsibility for the task. Of course, this is a team project, and anyone can
