@@ -83,13 +83,15 @@ echo "
 
 		if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			if((strcmp($_POST['category'], "All") == 0)){
-				echo "Category: All, ";
+				echo "Category: All ";
 			}else{
-				echo "Category: " . $_POST['category'] . ", ";
+				echo "Category: " . $_POST['category'];
 			}
 
+			echo "<br/>";
+
 			if(!(strcmp($_POST['ordering'], "") == 0))
-				echo "Ordering: " . $_POST['ordering'];
+				echo "Ordering by " . $_POST['ordering'];
 		}else{
 			echo "Displaying All";
 		}
