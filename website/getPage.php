@@ -20,6 +20,14 @@
 
 			echo '<img src="partimages/' . $row['associatedImageFilename1'] . '"/>';
 			echo $row['partName'] . $row['price'];
+			//$row[partID]
+			echo "
+				<form method='post' action='checkout.php'>
+					Pay for:
+					<input type='submit' name='test' value='$row[partID]'>
+
+				</form>
+				";
 
 			echo "<br/>";
 			echo "</li>";

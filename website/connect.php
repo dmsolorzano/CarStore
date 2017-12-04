@@ -4,10 +4,10 @@
 $errors = array();
 
 
-$host = 'localhost:3306';
+$host = 'localhost';
 $user = 'root';
 $password = '';
-$database = 'carstore';
+$database = 'CarStore';
 $parts = 'parts';
 $members = 'members';
 
