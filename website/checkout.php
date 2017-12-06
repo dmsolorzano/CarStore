@@ -5,7 +5,13 @@
     
     $query = "SELECT * FROM parts WHERE partID = $part";
     $item = mysqli_query($db, $query);
-    echo gettype($item);
+    //echo gettype($item);
+    echo $item['name'];
+    while($row = mysql_fetch_assoc($item)){
+       foreach($row as $field => $value){
+            echo $row['name'];
+        }
+    }
     
     
 ?>
