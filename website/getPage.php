@@ -19,12 +19,12 @@
 			echo "<li>";
 
 			echo '<img src="partimages/' . $row['associatedImageFilename1'] . '"/>';
-			echo $row['partName'] . $row['price'];
-			//$row[partID]
+			echo $row['partName'] ."<br>" . "<strong>" . $row['price'] . "</strong>";
+			
 			echo "
 				<form method='post' action='checkout.php'>
-					Pay for:
-					<input type='submit' name='test' value='$row[partID]'>
+					<input type=\"hidden\" name=\"part\" value=\"$row[partID]\">
+					<input type='submit' value='Checkout'>
 
 				</form>
 				";

@@ -10,6 +10,8 @@ $password = '';
 $database = 'CarStore';
 $parts = 'parts';
 $members = 'members';
+$zipToState = 'ziptostate';
+$zipToZone = 'ziptozone';
 
 /*
 $servername = "earth.cs.utep.edu";
